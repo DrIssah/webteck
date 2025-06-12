@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Price Alerts - PriceDropRadar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .price-tag {
+            position: relative;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: white;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 0.5rem;
+        }
+        
+        .checkbox-container:hover .checkmark {
+            border-color: #3b82f6;
+        }
+        
+        .checkbox-container input:checked ~ .checkmark {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-blue-500 text-2xl"></i>
+                        <span class="text-2xl font-bold gradient-text">PriceDropRadar</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="deals.html" class="text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Deals</a>
+                    <a href="categories.html" class="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-r from-blue-500 to-indigo-700 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 py-24 px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+                    Get Price Alerts
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-lg sm:text-xl md:mt-5 md:max-w-3xl">
+                    Never miss another price drop on your favorite products
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="p-6 sm:p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Create Your Alert Profile</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            How often would you like to receive alerts?
+                        </label>
+                        <div class="mt-2 space-y-2">
+                            <div class="flex items-center">
+                                <input id="frequency-immediate" name="frequency" type="radio" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label for="frequency-immediate" class="ml-3 block text-sm font-medium text-gray-700">
+                                    Immediately when prices drop
+                                </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="frequency-daily" name="frequency" type="radio" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label for="frequency-daily" class="ml-3 block text-sm font-medium text-gray-700">
+                                    Daily digest
+                                </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="frequency-weekly" name="frequency" type="radio" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <label for="frequency-weekly" class="ml-3 block text-sm font-medium text-gray-700">
+                                    Weekly roundup
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Which categories interest you? (select at least one)
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" checked class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Laptops</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Smartphones</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">TVs</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Headphones</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Cameras</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Gaming</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Smart Home</span>
+                            </label>
+                            <label class="checkbox-container inline-flex items-center px-4 py-2 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                                <input type="checkbox" class="sr-only">
+                                <span class="checkmark w-5 h-5 border-2 border-gray-300 rounded mr-3 flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </span>
+                                <span class="text-gray-700">Tablets</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="price-threshold" class="block text-sm font-medium text-gray-700">Only notify me for discounts of:</label>
+                        <select id="price-threshold" name="price-threshold" class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 rounded-md">
+                            <option>Any price drop</option>
+                            <option selected>10% or more</option>
+                            <option>20% or more</option>
+                            <option>30% or more</option>
+                            <option>50% or more</option>
+                        </select>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Register for Alerts
+                        </button>
+                    </div>
+                    
+                    <div class="text-center text-sm text-gray-500">
+                        <p>By registering, you agree to our <a href="#" class="text-blue-600 hover:text-blue-500">Terms of Service</a> and <a href="#" class="text-blue-600 hover:text-blue-500">Privacy Policy</a>.</p>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="bg-gray-50 px-6 py-4 sm:px-8 text-center">
+                <p class="text-sm text-gray-500">
+                    Already have an account? <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    What Our Users Say
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                    Join thousands of happy customers who save money every day
+                </p>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Sarah Johnson</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">
+                        "Saved $450 on my new MacBook thanks to PriceDropRadar alerts. The instant notifications are so convenient!"
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Michael Chen</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">
+                        "The weekly digest summarizes all the best deals. I've stopped checking multiple stores because PriceDropRadar finds everything."
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/28.jpg" alt="Emma Rodriguez">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Emma Rodriguez</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">
+                        "Got my dream gaming monitor for 35% off. The alert came right when the flash sale started!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-lg font-bold text-white">PriceDropRadar</h3>
+                    <p class="mt-4 text-sm text-gray-300">
+                        Never miss a price drop again. We track electronics prices so you don't have to.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Shop</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Laptops</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Phones</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">TVs</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Headphones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Affiliate Program</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2023 PriceDropRadar. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

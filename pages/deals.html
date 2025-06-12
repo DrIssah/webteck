@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Best Deals - PriceDropRadar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-blue-500 text-2xl"></i>
+                        <span class="text-2xl font-bold gradient-text">PriceDropRadar</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="deals.html" class="text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Deals</a>
+                    <a href="categories.html" class="text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-r from-blue-500 to-indigo-700 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 py-24 px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+                    Today's Best Deals
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-lg sm:text-xl md:mt-5 md:max-w-3xl">
+                    Don't miss these limited-time offers and price drops on electronics
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Laptops -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-blue-500">
+                    <i class="fas fa-laptop-code text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Laptops</h3>
+                <p class="mt-2 text-sm text-gray-500">1264 products</p>
+            </a>
+
+            <!-- Smartphones -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-purple-500">
+                    <i class="fas fa-mobile-alt text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Smartphones</h3>
+                <p class="mt-2 text-sm text-gray-500">987 products</p>
+            </a>
+
+            <!-- TVs -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-red-500">
+                    <i class="fas fa-tv text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">TVs</h3>
+                <p class="mt-2 text-sm text-gray-500">543 products</p>
+            </a>
+
+            <!-- Headphones -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-green-500">
+                    <i class="fas fa-headphones text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Headphones</h3>
+                <p class="mt-2 text-sm text-gray-500">732 products</p>
+            </a>
+
+            <!-- Cameras -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-yellow-500">
+                    <i class="fas fa-camera text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Cameras</h3>
+                <p class="mt-2 text-sm text-gray-500">421 products</p>
+            </a>
+
+            <!-- Smart Home -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-indigo-500">
+                    <i class="fas fa-home text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Smart Home</h3>
+                <p class="mt-2 text-sm text-gray-500">376 products</p>
+            </a>
+
+            <!-- Gaming -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-pink-500">
+                    <i class="fas fa-gamepad text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Gaming</h3>
+                <p class="mt-2 text-sm text-gray-500">658 products</p>
+            </a>
+
+            <!-- Tablets -->
+            <a href="#" class="category-card group bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                <div class="w-20 h-20 mx-auto mb-4 text-blue-400">
+                    <i class="fas fa-tablet-alt text-5xl category-icon transition duration-300"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900">Tablets</h3>
+                <p class="mt-2 text-sm text-gray-500">312 products</p>
+            </a>
+        </div>
+
+        <!-- Popular Brands Section -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900">Popular Brands</h2>
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Apple_logo_2013.svg" alt="Apple" class="h-12 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Samsung_Logo.svg" alt="Samsung" class="h-10 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Sony_logo_since_1973.png" alt="Sony" class="h-10 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/LG_2021_logo.svg" alt="LG" class="h-10 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Huawei_logo_2019.svg" alt="Huawei" class="h-10 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-10 object-contain">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-lg font-bold text-white">PriceDropRadar</h3>
+                    <p class="mt-4 text-sm text-gray-300">
+                        Never miss a price drop again. We track electronics prices so you don't have to.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Shop</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Laptops</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Phones</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">TVs</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Headphones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Affiliate Program</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2023 PriceDropRadar. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
